@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What causes the morning queue at a café? | Vikram Manisankar</title>
+<meta name="description" content="A field study of 220 customer parties at a Cambridge café, with a queue model used to test staffing options.">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Vikram Manisankar</a>
+    <nav>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#about">About</a>
+      <a href="../files/Vikram-Manisankar-Resume.pdf">Resume</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap narrow">
+  <a class="back" href="../index.html#projects">← All projects</a>
+
+  <div class="project-head">
+    <div class="eyebrow">Operations · Field study</div>
+    <h1>What causes the morning queue at a café?</h1>
+    <p class="lede">Our group sat in a busy Cambridge café for two sessions, timed every arriving party, and worked out what the café should change to cut waiting.</p>
+    <div class="meta">
+      <div><span>Course</span>Advanced Business Statistics, Hult</div>
+      <div><span>Type</span>Group project</div>
+      <div><span>Tools</span>Python, Excel</div>
+      <div><span>Date</span>October 2026</div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>220</b><span>parties observed, 110 per session</span></div>
+    <div class="stat"><b>~90%</b><span>of waiting-time variation explained by queue length</span></div>
+    <div class="stat"><b>15% vs 1%</b><span>of customers waiting 2+ minutes, morning vs lunch</span></div>
+  </div>
+
+  <div class="prose">
+    <h2>The question</h2>
+    <p>How does customer behaviour differ between the morning and lunch, what causes long waits, and what should the café do about it?</p>
+
+    <h2>What we did</h2>
+    <ul>
+      <li>Collected our own data on one Friday: a morning session (8 to 10 AM) and a lunch session (12 to 2 PM), recording arrival time, group size, takeaway or dine-in, queue length on arrival, waiting time and order type for every party.</li>
+      <li>Kept it to observable behaviour in a public space. We recorded no names, photos or guessed personal attributes.</li>
+      <li>Tested three insights in depth using chi-square tests, t-tests, correlation and regression, and challenged each with alternative explanations.</li>
+      <li>Built a queue replay model on the real arrival times to rank staffing options before recommending any spend.</li>
+    </ul>
+
+    <h2>What we found</h2>
+    <div class="chart">
+      <h4>Morning vs lunch</h4>
+      <p class="note">Share of parties, n = 110 per session</p>
+      <div class="bar-group">
+        <div class="bar-row"><div class="lbl">Takeaway, morning</div><div class="track"><div class="bar" style="width:73%"></div></div><div class="val">73%</div></div>
+        <div class="bar-row"><div class="lbl">Takeaway, lunch</div><div class="track"><div class="bar alt" style="width:56%"></div></div><div class="val">56%</div></div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-row"><div class="lbl">Waited 2+ min, morning</div><div class="track"><div class="bar" style="width:15%"></div></div><div class="val">15%</div></div>
+        <div class="bar-row"><div class="lbl">Waited 2+ min, lunch</div><div class="track"><div class="bar alt" style="width:1%"></div></div><div class="val">1%</div></div>
+      </div>
+      <div class="legend"><span><i></i>Morning</span><span><i class="alt"></i>Lunch</span></div>
+    </div>
+    <ol>
+      <li><b>The morning is a takeaway rush.</b> 73% of morning parties take away, against 56% at lunch.</li>
+      <li><b>Waiting is a capacity problem, not a menu problem.</b> Queue length explains about 90% of the variation in waiting time. Order type and group size add nothing once queue length is known. Each person ahead costs about 45 seconds in the morning and 33 at lunch.</li>
+      <li><b>Queues come from short bursts.</b> Most customers wait zero seconds. Every long wait we recorded fell inside two morning bursts between 8:44 and 9:09.</li>
+    </ol>
+
+    <h2>Recommendation</h2>
+    <ul>
+      <li><b>A queue-length trigger.</b> A second barista or till steps in at 3 people queuing in the morning and 4 at lunch. In the replay model this roughly halves total morning waiting.</li>
+      <li><b>A morning fast lane</b> for solo takeaway customers, with pre-order pickup and grab-and-go items, plus a second barista on standby for the 8:30 to 9:15 peak. The model shows about 70% less waiting.</li>
+      <li><b>Check the café's own sales data</b> on staffing and order mix before adding permanent headcount.</li>
+    </ul>
+
+    <h2>Limits</h2>
+    <p>One café, one Friday, about two hours per session. The morning was rainy and lunch was mostly dry, so weather cannot be separated from time of day. The replay model assumes a single counter, so its percentages rank the options and should not be read as forecasts. We recommended a follow-up study of at least 133 parties per session across several days.</p>
+
+    <p class="callout">This was a group project for a graded course, so the full notebook and presentation are available on request.</p>
+  </div>
+</main>
+
+<footer><div class="wrap">Vikram Manisankar · Cambridge, MA</div></footer>
+</body>
+</html>

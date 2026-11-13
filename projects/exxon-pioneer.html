@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ExxonMobil: cost structure and the Pioneer deal | Vikram Manisankar</title>
+<meta name="description" content="A cost, leverage and NPV model of ExxonMobil built from 10-K filings.">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Vikram Manisankar</a>
+    <nav>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#about">About</a>
+      <a href="../files/Vikram-Manisankar-Resume.pdf">Resume</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap narrow">
+  <a class="back" href="../index.html#projects">← All projects</a>
+
+  <div class="project-head">
+    <div class="eyebrow">Financial analysis · Excel</div>
+    <h1>ExxonMobil: cost structure and the Pioneer deal</h1>
+    <p class="lede">Between 2023 and 2025, ExxonMobil's sales fell 3% but operating profit fell 22%. Our group built a model from the 10-K filings to explain why, and to test whether the Pioneer Natural Resources acquisition made financial sense.</p>
+    <div class="meta">
+      <div><span>Course</span>Cost &amp; Managerial Analysis, Hult</div>
+      <div><span>Type</span>Group project, 5 members</div>
+      <div><span>Tools</span>Excel</div>
+      <div><span>Date</span>November 2026</div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>$323.9B</b><span>2025 sales</span></div>
+    <div class="stat"><b>2.43x</b><span>operating leverage, up from 1.89x</span></div>
+    <div class="stat"><b>$6.9B</b><span>base-case NPV of the Pioneer deal</span></div>
+  </div>
+
+  <div class="prose">
+    <h2>The question</h2>
+    <p>Why did profit fall so much faster than sales, how exposed is the company to a further drop, and would we have approved the Pioneer acquisition?</p>
+
+    <h2>What we did</h2>
+    <ul>
+      <li>Rebuilt the income statement and balance sheet in Excel from the fiscal 2024 and 2025 Form 10-K filings.</li>
+      <li>Classified costs as fixed or variable and cross-checked the split with the high-low method.</li>
+      <li>Calculated contribution margin, break-even sales, margin of safety, and operating and financial leverage for each year.</li>
+      <li>Built a discounted cash flow test of the Pioneer acquisition with NPV, IRR and sensitivity tables on the discount rate and synergies.</li>
+    </ul>
+
+    <h2>What we found</h2>
+    <ul>
+      <li><b>Fixed costs drove the profit drop.</b> The contribution margin ratio held at about 31%, but costs we classified as fixed rose by $10.4B (18%), and EBIT fell from $53.6B to $41.9B.</li>
+      <li><b>The company became more sensitive to sales.</b> Operating leverage rose from 1.89x to 2.43x, so a 10% fall in sales now cuts modeled EBIT by about 24%. The margin of safety fell from 43% to 33%.</li>
+      <li><b>Debt is not the risk.</b> Financial leverage was 1.01x and EBIT covered interest 69 times.</li>
+    </ul>
+
+    <div class="chart">
+      <h4>Pioneer acquisition: NPV by scenario</h4>
+      <p class="note">$ billions at an 8.1% discount rate</p>
+      <div class="bar-row"><div class="lbl">Worst case (IRR −1.2%)</div><div class="track"><div class="bar neg" style="width:77%"></div></div><div class="val">−32.8</div></div>
+      <div class="bar-row"><div class="lbl">Base case (IRR 9.6%)</div><div class="track"><div class="bar" style="width:16.2%"></div></div><div class="val">+6.9</div></div>
+      <div class="bar-row"><div class="lbl">Best case (IRR 15.4%)</div><div class="track"><div class="bar" style="width:100%"></div></div><div class="val">+42.6</div></div>
+    </div>
+
+    <h2>Recommendation</h2>
+    <p>We would have approved the acquisition under base-case assumptions: NPV of $6.9B and an IRR of 9.6% against an 8.1% cost of capital. But the decision is finely balanced. NPV turns negative at a discount rate of about 8.9%, or if the long-term synergies are removed. Before committing, we would ask for normalized standalone cash flows and a market-based discount rate.</p>
+
+    <h2>Limits</h2>
+    <p>The fixed and variable split is our estimate, since the company does not disclose cost behaviour. The consolidated filings also do not isolate Pioneer's share of the cost increase, so the deal test is a simplified model.</p>
+
+    <p class="callout">This was a group project for a graded course, so the Excel model and report are available on request.</p>
+  </div>
+</main>
+
+<footer><div class="wrap">Vikram Manisankar · Cambridge, MA</div></footer>
+</body>
+</html>

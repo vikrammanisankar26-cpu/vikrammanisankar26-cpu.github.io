@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Do early hotel bookings cancel more? | Vikram Manisankar</title>
+<meta name="description" content="A statistical analysis of 119,000 hotel bookings to advise a revenue manager on cancellation policy.">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Vikram Manisankar</a>
+    <nav>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#about">About</a>
+      <a href="../files/Vikram-Manisankar-Resume.pdf">Resume</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap narrow">
+  <a class="back" href="../index.html#projects">← All projects</a>
+
+  <div class="project-head">
+    <div class="eyebrow">Statistics · Python</div>
+    <h1>Do early hotel bookings cancel more?</h1>
+    <p class="lede">A city hotel cancels about 42% of its bookings. I tested whether bookings made more than 90 days ahead are the problem, and whether the gap is big enough to change the cancellation policy.</p>
+    <div class="meta">
+      <div><span>Course</span>Advanced Business Statistics, Hult</div>
+      <div><span>Type</span>Individual project</div>
+      <div><span>Tools</span>Python, pandas</div>
+      <div><span>Date</span>October 2026</div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>119,206</b><span>bookings after cleaning</span></div>
+    <div class="stat"><b>56% vs 31%</b><span>early vs late cancellation rate</span></div>
+    <div class="stat"><b>25.1 pts</b><span>gap, 95% CI 24.5 to 25.8</span></div>
+  </div>
+
+  <div class="prose">
+    <h2>The question</h2>
+    <p>The analysis is written for the hotel's revenue manager. The decision is whether to tighten cancellation rules for bookings made more than 90 days before arrival. Because a stricter rule could push guests away, I set the bar before running anything: the gap had to be at least 10 percentage points to be worth acting on.</p>
+
+    <h2>What I did</h2>
+    <ul>
+      <li>Cleaned the public Hotel Booking Demand dataset (119,390 rows), removing 184 bookings with no guests, impossible prices or undefined segments.</li>
+      <li>Split City Hotel bookings into early (more than 90 days ahead) and late, and compared cancellation rates with a z-test for two proportions, confirmed with a chi-square test.</li>
+      <li>Challenged the result three ways: removing duplicate rows, repeating the test inside the largest booking channel, and checking whether the same pattern appears at a second hotel.</li>
+    </ul>
+
+    <h2>What I found</h2>
+    <p>Early bookings cancel almost twice as often. The gap shrinks when I control for who books early, but it stays above the 10-point bar in every check.</p>
+
+    <div class="chart">
+      <h4>Cancellation rate, early vs late bookings (City Hotel)</h4>
+      <p class="note">The gap under each of three checks</p>
+      <div class="bar-group">
+        <div class="bar-row"><div class="lbl">All bookings, early</div><div class="track"><div class="bar" style="width:55.8%"></div></div><div class="val">55.8%</div></div>
+        <div class="bar-row"><div class="lbl">All bookings, late</div><div class="track"><div class="bar alt" style="width:30.6%"></div></div><div class="val">30.6%</div></div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-row"><div class="lbl">Duplicates removed, early</div><div class="track"><div class="bar" style="width:39.2%"></div></div><div class="val">39.2%</div></div>
+        <div class="bar-row"><div class="lbl">Duplicates removed, late</div><div class="track"><div class="bar alt" style="width:25.2%"></div></div><div class="val">25.2%</div></div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-row"><div class="lbl">Online travel agents, early</div><div class="track"><div class="bar" style="width:46%"></div></div><div class="val">46%</div></div>
+        <div class="bar-row"><div class="lbl">Online travel agents, late</div><div class="track"><div class="bar alt" style="width:32%"></div></div><div class="val">32%</div></div>
+      </div>
+      <div class="legend"><span><i></i>More than 90 days ahead</span><span><i class="alt"></i>90 days or less</span></div>
+    </div>
+
+    <p>One more signal stood out. Among early online-agency bookings, guests who made no special request cancelled 66% of the time, against 33% for guests who made at least one. That is consistent with people holding a free room as a placeholder while they keep shopping.</p>
+
+    <h2>Recommendation</h2>
+    <ul>
+      <li>Shorten the free-cancellation window for online-agency bookings made more than 90 days ahead, and pilot it on selected arrival dates for 8 to 12 weeks before rolling it out.</li>
+      <li>Send a reconfirmation email to early bookers with no special requests, and treat them as higher risk when setting overbooking levels.</li>
+      <li>Handle group and offline-agent cancellations through contract terms, since lead time is not what drives them.</li>
+    </ul>
+
+    <h2>Limits</h2>
+    <p>This is observational data from two hotels with no booking ID or cancellation date. It shows a strong association, but it cannot prove that booking early causes cancellations or predict how guests would react to a new rule. That is why the recommendation is a pilot.</p>
+
+    <h2>Files</h2>
+    <ul class="files">
+      <li><a href="../files/hotel-cancellations-executive-summary.pdf">Executive summary <span>PDF</span></a></li>
+      <li><a href="../files/hotel-cancellations-analysis.ipynb" download>Analysis notebook <span>Jupyter</span></a></li>
+    </ul>
+  </div>
+</main>
+
+<footer><div class="wrap">Vikram Manisankar · Cambridge, MA</div></footer>
+</body>
+</html>
