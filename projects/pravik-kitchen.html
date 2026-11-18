@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pravik's Kitchen: equipment, a helper, or both? | Vikram Manisankar</title>
+<meta name="description" content="Unit economics, break-even and an NPV capacity decision for a one-person home food business.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f5c43'/%3E%3Ctext x='32' y='42' font-family='Arial,Helvetica,sans-serif' font-size='26' font-weight='800' fill='%23f6f4ee' text-anchor='middle'%3EVM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="mono">VM</span>Vikram Manisankar</a>
+    <nav>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+      <a class="pill" href="../files/Vikram-Manisankar-Resume.pdf">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap narrow">
+  <a class="back" href="../index.html#projects">← All projects</a>
+
+  <div class="project-head">
+    <div class="eyebrow">Unit economics · Python</div>
+    <h1>Pravik's Kitchen: equipment, a helper, or both?</h1>
+    <p class="lede">My mother runs a weekend home-cooked South Indian food business. She cooks alone for about 12 hours a weekend, her main dishes sell out, and she turns customers away. I priced every item, found the break-even and valued two ways to add capacity.</p>
+    <div class="meta">
+      <div><span>Course</span>Cost &amp; Managerial Analysis, Hult</div>
+      <div><span>Type</span>Individual project</div>
+      <div><span>Tools</span>Excel, Python</div>
+      <div><span>Date</span>November 2026</div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>63%</b><span>weighted contribution margin</span></div>
+    <div class="stat"><b>5 items</b><span>break-even per weekend, of 76.5 sold</span></div>
+    <div class="stat"><b>+$4,650</b><span>NPV of the equipment, 1.3-year payback</span></div>
+  </div>
+
+  <div class="prose">
+    <p class="callout">The business keeps no written records, so every price, cost and volume is my estimate, calibrated to the roughly $1,000 she takes in on a normal weekend.</p>
+
+    <h2>Unit economics</h2>
+    <p>Cooking at home and taking cash or Zelle means almost no fixed costs. I split the one mixed cost, the household gas and electric bill, with the high-low method: each extra dish adds about $0.30, and the remaining base bill belongs to the household, not the business. Across seven menu items, each unit sold contributes $8.48 on average.</p>
+    <figure><img src="../assets/img/pravik-01_cm_by_item.png" alt="Contribution margin per weekend by menu item, led by chicken biryani and chicken gravy" loading="lazy"></figure>
+
+    <h2>The hidden cost is her time</h2>
+    <p>Treating her 12 hours as free, she breaks even at 5 items a weekend, a 94% margin of safety. Paying her time at $16 an hour moves break-even to 27 items and the margin to 64%. The business can survive a slow season. What it cannot survive is her stopping.</p>
+    <figure><img src="../assets/img/pravik-03_break_even.png" alt="Break-even units per weekend with and without paying for her time" loading="lazy"></figure>
+
+    <h2>The capacity decision</h2>
+    <p>The constraint is capacity, not demand: she turns down two to three orders a weekend. Most of her time goes into watching each batch, so a pot twice the size takes about the same time.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th></th><th>Plan A: equipment</th><th>Plan B: equipment + helper</th></tr></thead>
+        <tbody>
+          <tr><td>Upfront</td><td>$2,500</td><td>$2,500</td></tr>
+          <tr><td>Extra per year</td><td>$300 upkeep</td><td>+ $4,992 helper, +12 party trays</td></tr>
+          <tr><td>NPV at 16.5%</td><td><b>+$4,650</b></td><td><b>−$5,845</b></td></tr>
+          <tr><td>Decision</td><td>Accept</td><td>Wait</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <figure><img src="../assets/img/pravik-05_helper_trigger.png" alt="Extra NPV from hiring a helper turns positive at about six turned-down orders a weekend" loading="lazy"></figure>
+
+    <h2>Recommendation</h2>
+    <p>Buy the equipment now; it pays for itself in under two years and stops her turning people away, and it still clears with 20% fewer orders. Hire a part-time helper once she is turning down about six orders a weekend, or sooner if the hours start to wear on her: each hour she gets back is worth about $51 of profit, against a $16 wage.</p>
+
+    <h2>Model and code</h2>
+    <ul class="files">
+      <li><a href="https://github.com/vikrammanisankar26-cpu/pravik-kitchen-unit-economics">Python model, charts and tests <span>GitHub</span></a></li>
+    </ul>
+  </div>
+</main>
+
+<footer><div class="wrap"><span>Vikram Manisankar · Cambridge, MA</span><a href="mailto:vikram.manisankar26@gmail.com">vikram.manisankar26@gmail.com</a></div></footer>
+</body>
+</html>

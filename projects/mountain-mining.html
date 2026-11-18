@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mountain Mining: growing faster than it can afford | Vikram Manisankar</title>
+<meta name="description" content="Ratio analysis, DuPont, sustainable growth and a projection for a company growing five times faster than it can afford.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f5c43'/%3E%3Ctext x='32' y='42' font-family='Arial,Helvetica,sans-serif' font-size='26' font-weight='800' fill='%23f6f4ee' text-anchor='middle'%3EVM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="mono">VM</span>Vikram Manisankar</a>
+    <nav>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+      <a class="pill" href="../files/Vikram-Manisankar-Resume.pdf">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap narrow">
+  <a class="back" href="../index.html#projects">← All projects</a>
+
+  <div class="project-head">
+    <div class="eyebrow">Corporate finance · Python</div>
+    <h1>Mountain Mining: growing faster than it can afford</h1>
+    <p class="lede">Sales are up 63% in two years. So why is cash down 71%, debt up 58% and net income falling? I diagnosed the company with ratio analysis, DuPont and Higgins' sustainable growth rate, then projected where its current path leads.</p>
+    <div class="meta">
+      <div><span>Course</span>Financial Management, Hult</div>
+      <div><span>Type</span>Course case</div>
+      <div><span>Tools</span>Python, Excel</div>
+      <div><span>Date</span>November 2026</div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>30% vs 5.8%</b><span>actual vs sustainable growth</span></div>
+    <div class="stat"><b>87%</b><span>of 2026 asset growth funded by lenders and suppliers</span></div>
+    <div class="stat"><b>2.2x</b><span>debt to equity by 2029 if growth continues</span></div>
+  </div>
+
+  <div class="prose">
+    <h2>The diagnosis</h2>
+    <p>Sustainable growth is return on equity times the share of profit retained: the fastest a company can grow without raising equity or adding leverage. Mountain Mining's ROE is 9.6% and it retains 60% of profit, which supports about 5.8% growth a year. It grew 30%.</p>
+    <figure><img src="../assets/img/mountain-01_actual_vs_sustainable.png" alt="Actual sales growth of 25% and 30% against sustainable growth of 6.8% and 5.8%" loading="lazy"></figure>
+    <ul>
+      <li><b>Growth is getting less profitable.</b> Gross margin fell from 26.0% to 20.5% and net margin from 7.5% to 4.0%. Net income fell two years in a row.</li>
+      <li><b>Cash is trapped in working capital.</b> Inventory days rose from 63 to 93 and receivable days from 42 to 58. The company is pushing the strain onto suppliers, with payables stretched from 45 to 74 days.</li>
+      <li><b>Debt fills the gap.</b> The quick ratio fell below 1, debt to equity rose from 0.62 to 0.87 and interest coverage fell from 4.9x to 3.1x.</li>
+    </ul>
+    <figure><img src="../assets/img/mountain-03_working_capital_days.png" alt="Days sales outstanding, inventory days and payables days rising from 2024 to 2026" loading="lazy"></figure>
+
+    <h2>The supplier-discount decision</h2>
+    <p>Suppliers offer 2/30 net 60. Skipping the 2% discount to pay on day 60 costs an effective 27.9% a year, against a 7% cost of debt. The forgone discounts were worth about $8,700, or 29% of net income. Borrowing to take the discount would have added roughly $4,700 to after-tax profit.</p>
+
+    <h2>Where 30% growth leads</h2>
+    <p>I projected the balance sheet forward, holding 2026 margins, asset intensity and payout constant, with debt as the plug. At 30% growth, debt reaches 2.2 times equity by 2029. Even cutting the dividend to zero only brings that down to 1.8x. Growing at the sustainable rate keeps leverage flat at 0.87x, which also confirms the model works as the theory predicts.</p>
+    <figure><img src="../assets/img/mountain-05_projection.png" alt="Debt to equity under four growth paths to 2029" loading="lazy"></figure>
+
+    <h2>Recommendation</h2>
+    <ol>
+      <li>Slow growth toward the sustainable rate until margins recover.</li>
+      <li>Take the 2% supplier discount. It is the cheapest profit improvement available.</li>
+      <li>Bring receivable and inventory days back toward 2024 levels to release cash.</li>
+      <li>If fast growth is strategic, fund it with new equity rather than more debt.</li>
+    </ol>
+
+    <h2>Model and code</h2>
+    <ul class="files">
+      <li><a href="https://github.com/vikrammanisankar26-cpu/mountain-mining-growth-diagnosis">Python model, data, charts and tests <span>GitHub</span></a></li>
+    </ul>
+  </div>
+</main>
+
+<footer><div class="wrap"><span>Vikram Manisankar · Cambridge, MA</span><a href="mailto:vikram.manisankar26@gmail.com">vikram.manisankar26@gmail.com</a></div></footer>
+</body>
+</html>
